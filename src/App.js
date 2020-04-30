@@ -4,8 +4,8 @@ import "./App.css";
 import TextBox from "./TextBox";
 import Button from "./Button";
 
-function onClickValueParent() {
-  alert("Clicked from Parent");
+function onClickValueParent(_val) {
+  alert("Clicked from Parent" + _val);
 }
 
 const ButtonValue = "Button Click Constant";
@@ -21,7 +21,7 @@ function App() {
 
         <TextBox myValue="Surendar" anotherType="text" />
 
-        <Button myvalue='with click event' onClickEvent={onClickValueParent} />
+        <Button myvalue='with click event' onClickEvent={() => onClickValueParent('Test sending value')} />
 
         <Button myvalue={ButtonValue} />
       </header>

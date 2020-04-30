@@ -3,19 +3,21 @@ import React from "react";
 // W3 Reference
 // <button type="button">Click Me!</button>
 
-function onClickValueChild() {
-  debugger;
-  alert("Clicked from Child");
-}
 
 function Button(props) {
 
-    React.useState()
+const [name, setName]  = React.useState('Pushpanathan');
+
+function onClickValueChild() {
+  console.log(setName);
+  setName('Maniraj');
+}
+
   return (
     <>
       <input
         type="button"
-        value={props.myvalue}
+        value={name}
         onClick={props.onClickEvent || onClickValueChild}
       />
     </>
