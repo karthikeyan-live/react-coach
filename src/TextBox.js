@@ -1,8 +1,13 @@
 import React from "react";
 
+ function onchage(){
+    console.log("child onchage");
+ 
+  }
+
 function TextBox(props) {
   return (
-    <input type={props.anotherType} id="fname" name="fname" value={props.myValue} />
+    <input type={props.type} id="fname" name={props.name || ''} value={props.value} onChange={props.onChange || onchage } />
   );
 }
     
